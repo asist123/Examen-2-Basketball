@@ -1,0 +1,123 @@
+.stats-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1.2fr 1.45fr;
+  gap: 12px;
+}
+
+.stats-panel__card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px;
+  border-radius: 16px;
+  background: var(--surface-strong);
+  border: 1px solid var(--border);
+  min-width: 0;
+}
+
+.stats-panel__card--highlight {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-text);
+}
+
+.stats-panel__card--leaders {
+  gap: 3px;
+  background: rgba(20, 18, 40, 0.9);
+  color: #f4f2ff;
+}
+
+.stats-panel__card--chart {
+  grid-column: 1 / -1;
+}
+
+.stats-panel__label {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.stats-panel__card--highlight .stats-panel__label {
+  color: rgba(26, 19, 0, 0.75);
+}
+
+.stats-panel__value {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.stats-panel__value--big {
+  font-size: 2rem;
+}
+
+.stats-panel__chip {
+  align-self: flex-start;
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: rgba(26, 19, 0, 0.85);
+  color: var(--accent);
+  font-size: 0.65rem;
+  font-weight: 700;
+}
+
+.stats-panel__leader-title {
+  margin-top: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.stats-panel__leader {
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+/* Gráfico de barras con CSS puro */
+.stats-panel__bars {
+  display: grid;
+  gap: 8px;
+  margin: 4px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.stats-panel__bar-row {
+  display: grid;
+  grid-template-columns: 110px 1fr 24px;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.75rem;
+}
+
+.stats-panel__bar-track {
+  height: 10px;
+  border-radius: 999px;
+  background: var(--border);
+  overflow: hidden;
+}
+
+.stats-panel__bar-fill {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--orange), var(--teal));
+  transition: width 0.4s ease;
+}
+
+.stats-panel__bar-count {
+  font-weight: 700;
+  text-align: right;
+}
+
+@media (max-width: 800px) {
+  .stats-panel {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stats-panel__card--leaders,
+  .search-history {
+    grid-column: 1 / -1;
+  }
+}
