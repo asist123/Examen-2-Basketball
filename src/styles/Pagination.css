@@ -1,0 +1,84 @@
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.pagination__size {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pagination__label {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.pagination__select {
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--surface-strong);
+  color: var(--text);
+  font-size: 0.75rem;
+}
+
+.app--dark .pagination__select option {
+  background: #1b1838;
+}
+
+.pagination__info {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.pagination__controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.pagination__btn {
+  min-width: 30px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--surface-strong);
+  color: var(--text);
+  font-size: 0.72rem;
+  font-weight: 600;
+  transition: background 0.15s, transform 0.15s;
+}
+
+.pagination__btn:hover:not(:disabled) {
+  background: var(--row-hover);
+  transform: translateY(-1px);
+}
+
+.pagination__btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pagination__btn--active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-text);
+}
+
+.pagination__btn--active:hover:not(:disabled) {
+  background: var(--accent);
+}
+
+.pagination__gap {
+  padding: 0 4px;
+  color: var(--text-muted);
+}
