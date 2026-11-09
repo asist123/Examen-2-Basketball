@@ -1,0 +1,147 @@
+.player-table {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--row-bg);
+}
+
+.player-table__scroll {
+  overflow-x: auto;
+}
+
+.player-table__table {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+.player-table__th {
+  padding: 12px 10px;
+  background: var(--head-bg);
+  color: #e9e6ff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: left;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.player-table__th--center,
+.player-table__th--num {
+  text-align: center;
+}
+
+.player-table__th--fav {
+  width: 56px;
+  text-align: center;
+}
+
+.player-table__th--sortable {
+  cursor: pointer;
+}
+
+.player-table__th--sortable:hover {
+  color: var(--accent);
+}
+
+.player-table__sort {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+}
+
+/* Cuadrito amarillo para indicar columnas ordenables; muestra la flecha si está activa */
+.player-table__arrow {
+  display: inline-grid;
+  place-items: center;
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  background: var(--accent);
+  color: var(--accent-text);
+  font-size: 0.7rem;
+  font-weight: 800;
+  line-height: 1;
+  opacity: 0.55;
+}
+
+.player-table__arrow--active {
+  opacity: 1;
+}
+
+.player-table__empty {
+  padding: 32px 16px;
+  text-align: center;
+  color: #6b6885;
+  background: var(--row-bg);
+}
+
+/* Fila */
+.player-row {
+  background: var(--row-bg);
+  color: var(--row-text);
+  cursor: pointer;
+  border-bottom: 1px solid var(--row-border);
+  transition: background 0.15s;
+}
+
+.player-row:hover {
+  background: var(--row-hover);
+}
+
+.player-row--painted-even {
+  background: var(--row-even);
+}
+
+.player-row--painted-odd {
+  background: var(--row-odd);
+}
+
+.player-row__cell {
+  padding: 11px 10px;
+}
+
+.player-row__cell--fav {
+  text-align: center;
+}
+
+.player-row__cell--center,
+.player-row__cell--num {
+  text-align: center;
+}
+
+.player-row__cell--name {
+  font-weight: 700;
+}
+
+.player-row__star {
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: 1px solid #e0b000;
+  border-radius: 5px;
+  background: transparent;
+  color: #c99700;
+  font-size: 0.8rem;
+  line-height: 1;
+  transition: transform 0.15s, background 0.15s;
+}
+
+.player-row__star:hover {
+  transform: scale(1.15);
+}
+
+.player-row__star--active {
+  background: var(--accent);
+  color: var(--accent-text);
+}
